@@ -35,7 +35,7 @@ CUDA_VISIBLE_DEVICES=0 python eval.py --checkpoint [path of the pretrained check
 ```
 
 ## Pretrained Model
-
+The code has been reorganized, and the models have been retrained. Therefore, the results may not be exactly the same as those in the paper.
 
 | Model |Lambda | Metric | ckpt | log | 
 |-------|--------|--------|------|----|
