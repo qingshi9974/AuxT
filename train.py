@@ -9,7 +9,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from Meter import AverageMeterTEST, AverageMeterTRAIN
+from utils.Meter import AverageMeterTEST, AverageMeterTRAIN
 from torch.utils.data import DataLoader
 from torchvision import transforms
 from compressai.datasets import ImageFolder
@@ -87,34 +87,35 @@ def configure_optimizers(net, args):
   
 
     
-def test_epoch(epoch, test_dataloader, model, criterion):
+def test_epoch(iterations, test_dataloader, model, criterion):
     model.eval()
     device = next(model.parameters()).device
 
     loss = AverageMeterTEST()
     bpp_loss = AverageMeterTEST()
     mse_loss = AverageMeterTEST()
-    aux_loss = AverageMeterTEST()
+    psnr_loss = AverageMeterTEST()
 
     with torch.no_grad():
         for d in test_dataloader:
             d = d.to(device)
             out_net = model(d)
             out_criterion = criterion(out_net, d)
-            aux_loss.update(model.aux_loss())
             bpp_loss.update(out_criterion["bpp_loss"])
             loss.update(out_criterion["loss"])
             mse_losss=out_criterion["mse_loss"]
             psnr = 10 * (torch.log(1/ mse_losss) / np.log(10))
-            mse_loss.update(psnr)
+            mse_loss.update(mse_loss)
+            psnr_loss.update(psnr)
       
 
     print(
-        f"Test epoch {epoch}: Average losses:"
+        f"\tIterations {iterations}: Average losses:"
         f"\tLoss: {loss.avg:.3f} |"
+        f"\tPSNR loss: {psnr_loss.avg :.3f} |"
         f"\tMSE loss: {mse_loss.avg :.3f} |"
         f"\tBpp loss: {bpp_loss.avg:.4f} |"
-        f"\tAux loss: {aux_loss.avg:.2f}\n"
+      
     )
     return loss.avg
 
