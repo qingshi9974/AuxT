@@ -18,10 +18,11 @@ This repository is the official Pytorch implementation of AuxT.
 
 ## Dependencies
 - python==3.9.19
-- PyTorch==2.2.0
+- torch==2.2.0
 - compressai==1.2.4
 - einops==0.8.0
 - timm==1.0.12
+- pywavelets==1.6.0
 ## Training
 
 ``` 
