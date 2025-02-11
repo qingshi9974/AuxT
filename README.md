@@ -39,12 +39,21 @@ CUDA_VISIBLE_DEVICES='0' python eval.py --checkpoint [path of the pretrained che
 
 | Model |Lambda | Metric | ckpt | log | 
 |-------|--------|--------|------|----|
-|TCM-small anchor|0.0483   | MSE   |    |[Link](https://drive.google.com/file/d/1NOlxyb_xs6b_rKVDAAiDH2CfJmLBySVS/view?usp=sharing) |
-|TCM-small anchor |0.0250   | MSE   |   |[Link](https://drive.google.com/file/d/1IQtTwTqRJu8gSkCe77gOMOQXhs_OTkbv/view?usp=sharing) |
-|TCM-small anchor|0.0130   | MSE   |    |[Link](https://drive.google.com/file/d/1r7ybguksq7ab1BCBhUATujGmHzBKC64L/view?usp=sharing) |
-|TCM-small anchor|0.0067   | MSE   |    |[Link](https://drive.google.com/file/d/1Xca6OFjfvdZgh2rLMneAbF8T8cZMZ-JA/view?usp=sharing) |
-|TCM-small anchor|0.0035   | MSE   |  | [Link](https://drive.google.com/file/d/1Oli33T365SLBlmI5TpM7EftgZXNf3X1y/view?usp=sharing)|
-|TCM-small anchor|0.0018   | MSE   |   | [Link](https://drive.google.com/file/d/1DAwg_RKpztwqKqN2CQo_wqZy_lzw-ssv/view?usp=sharing)|
+|TCM-small+AuxT|0.0483   | MSE   |    |[Link](https://drive.google.com/file/d/1NOlxyb_xs6b_rKVDAAiDH2CfJmLBySVS/view?usp=sharing) |
+|TCM-small+AuxT |0.0250   | MSE   |   |[Link](https://drive.google.com/file/d/1IQtTwTqRJu8gSkCe77gOMOQXhs_OTkbv/view?usp=sharing) |
+|TCM-small+AuxT|0.0130   | MSE   |    |[Link](https://drive.google.com/file/d/1r7ybguksq7ab1BCBhUATujGmHzBKC64L/view?usp=sharing) |
+|TCM-small+AuxT|0.0067   | MSE   |    |[Link](https://drive.google.com/file/d/1Xca6OFjfvdZgh2rLMneAbF8T8cZMZ-JA/view?usp=sharing) |
+|TCM-small+AuxT|0.0035   | MSE   |  | [Link](https://drive.google.com/file/d/1Oli33T365SLBlmI5TpM7EftgZXNf3X1y/view?usp=sharing)|
+|TCM-small+AuxT|0.0018   | MSE   |   | [Link](https://drive.google.com/file/d/1DAwg_RKpztwqKqN2CQo_wqZy_lzw-ssv/view?usp=sharing)|
+
+| Model |Lambda | Metric | ckpt | log | 
+|-------|--------|--------|------|----|
+|TCM-small Anchor|0.0483   | MSE   | [ckpt](https://drive.google.com/file/d/1rXSQr-C3hO-7GsU_Ax6xtxrE-DT6jrNb/view?usp=sharing)   |[Link](https://drive.google.com/file/d/1rLHyiT1F_u2UA0aIwP9SpvjKfHnM0Oyn/view?usp=sharing) |
+|TCM-small Anchor |0.0250   | MSE   | [ckpt](https://drive.google.com/file/d/10D0Gv1n1BvvEweAQYIJ2Y6aEfgmODCpw/view?usp=sharing)  |[Link](https://drive.google.com/file/d/1czUxhWN1k25JtdNGspmSOE9bKodkkS4a/view?usp=sharing) |
+|TCM-small Anchor|0.0130   | MSE   | [ckpt](https://drive.google.com/file/d/1dxSAeiCHuyIo2H3VmLZSL51b7ZlGGw6N/view?usp=sharing)   |[Link](https://drive.google.com/file/d/1RBlNxhW9OIPceW2rtTtTG41COwSrNGlS/view?usp=sharing) |
+|TCM-small Anchor|0.0067   | MSE   | [ckpt](https://drive.google.com/file/d/1QScAdXDf7jcpqB2n1WI-pIqru4YbR9U7/view?usp=sharing)   |[Link](https://drive.google.com/file/d/1k7HuiXe7_ZMOAY-n6Q6yR2MLsW2YFmIT/view?usp=sharing) |
+|TCM-small Anchor|0.0035   | MSE   | [ckpt](https://drive.google.com/file/d/1ooO4d_nFU4mujaQ17K3ezxfYXLfPhpV0/view?usp=sharing)  | [Link](https://drive.google.com/file/d/1YBbzyPV4qaoX9EDtglBmKjDucGHPXH2T/view?usp=sharing)|
+|TCM-small Anchor|0.0018   | MSE   |  [ckpt](https://drive.google.com/file/d/1ycX0O4M3eGKyIWdb9b2UU8MPvpY5kGK_/view?usp=sharing) | [Link](https://drive.google.com/file/d/1mbi1pm54KILy_GiBZGaqi8CJwrZikJng/view?usp=sharing)|
 
 
 ## Citation
