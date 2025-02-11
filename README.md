@@ -1,4 +1,5 @@
-<h1 align="center">On Disentangled Training for Nonlinear Transform in Learned Image Compression </h1>
+<h1 align="center"> ICLR2025 Spotlight</h1>
+<h1 align="center"> On Disentangled Training for Nonlinear Transform in Learned Image Compression </h1>
 
 <p align="center">
     <a href="https://arxiv.org/abs/2501.13751"><img src="https://img.shields.io/badge/arXiv-2501.13751-b31b1b.svg" alt="Paper"></a>
@@ -37,14 +38,14 @@ CUDA_VISIBLE_DEVICES='0' python eval.py --checkpoint [path of the pretrained che
 ## Pretrained Model
 
 
-| Lambda | Metric | ckpt | log | 
-|--------|--------|------|----|
-|0.0483   | MSE   |    | |
-|0.0250   | MSE   |   | |
-|0.0130   | MSE   |    | |
-|0.0067   | MSE   |    | |
-|0.0035   | MSE   |  | |
-|0.0018   | MSE   |   | |
+| Model |Lambda | Metric | ckpt | log | 
+|-------|--------|--------|------|----|
+|TCM-small anchor|0.0483   | MSE   |    |[https://drive.google.com/file/d/1NOlxyb_xs6b_rKVDAAiDH2CfJmLBySVS/view?usp=sharing] |
+|TCM-small anchor |0.0250   | MSE   |   |[https://drive.google.com/file/d/1IQtTwTqRJu8gSkCe77gOMOQXhs_OTkbv/view?usp=sharing] |
+|TCM-small anchor|0.0130   | MSE   |    |[https://drive.google.com/file/d/1r7ybguksq7ab1BCBhUATujGmHzBKC64L/view?usp=sharing] |
+|TCM-small anchor|0.0067   | MSE   |    |[https://drive.google.com/file/d/1Xca6OFjfvdZgh2rLMneAbF8T8cZMZ-JA/view?usp=sharing] |
+|TCM-small anchor|0.0035   | MSE   |  | [https://drive.google.com/file/d/1Oli33T365SLBlmI5TpM7EftgZXNf3X1y/view?usp=sharing]|
+|TCM-small anchor|0.0018   | MSE   |   | [https://drive.google.com/file/d/1DAwg_RKpztwqKqN2CQo_wqZy_lzw-ssv/view?usp=sharing]|
 
 
 ## Citation
