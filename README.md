@@ -26,12 +26,12 @@ This repository is the official Pytorch implementation of AuxT.
 ## Training
 
 ``` 
-CUDA_VISIBLE_DEVICES='0' python -u train.py --ortho 0.1 --lmbda 0.0483 -d [path of training dataset] --cuda --save_path [path for checkpoint] --save
+CUDA_VISIBLE_DEVICES=0 python -u train.py --ortho 0.1 --lmbda 0.0483 -d [path of training dataset] --cuda --save_path [path for checkpoint] --save
 ```
 
 ## Evaluation
 ``` 
-CUDA_VISIBLE_DEVICES='0' python eval.py --checkpoint [path of the pretrained checkpoint] --data [path of testing dataset] --cuda --real
+CUDA_VISIBLE_DEVICES=0 python eval.py --checkpoint [path of the pretrained checkpoint] --data [path of testing dataset] --cuda --real
 ```
 
 ## Pretrained Model
@@ -39,12 +39,12 @@ CUDA_VISIBLE_DEVICES='0' python eval.py --checkpoint [path of the pretrained che
 
 | Model |Lambda | Metric | ckpt | log | 
 |-------|--------|--------|------|----|
-|TCM-small+AuxT|0.0483   | MSE   |    |[Link](https://drive.google.com/file/d/1NOlxyb_xs6b_rKVDAAiDH2CfJmLBySVS/view?usp=sharing) |
-|TCM-small+AuxT |0.0250   | MSE   |   |[Link](https://drive.google.com/file/d/1IQtTwTqRJu8gSkCe77gOMOQXhs_OTkbv/view?usp=sharing) |
-|TCM-small+AuxT|0.0130   | MSE   |    |[Link](https://drive.google.com/file/d/1r7ybguksq7ab1BCBhUATujGmHzBKC64L/view?usp=sharing) |
-|TCM-small+AuxT|0.0067   | MSE   |    |[Link](https://drive.google.com/file/d/1Xca6OFjfvdZgh2rLMneAbF8T8cZMZ-JA/view?usp=sharing) |
-|TCM-small+AuxT|0.0035   | MSE   |  | [Link](https://drive.google.com/file/d/1Oli33T365SLBlmI5TpM7EftgZXNf3X1y/view?usp=sharing)|
-|TCM-small+AuxT|0.0018   | MSE   |   | [Link](https://drive.google.com/file/d/1DAwg_RKpztwqKqN2CQo_wqZy_lzw-ssv/view?usp=sharing)|
+|TCM-small+AuxT|0.0483   | MSE   | [ckpt](https://drive.google.com/file/d/1q-GrJ8mv9s30TCsP_mzAj4V_dwA91yOi/view?usp=sharing)   |[Link](https://drive.google.com/file/d/1NOlxyb_xs6b_rKVDAAiDH2CfJmLBySVS/view?usp=sharing) |
+|TCM-small+AuxT |0.0250   | MSE   | [ckpt](https://drive.google.com/file/d/1ioc3Q3HKgzMSa-Q_EAsSRjLat9iw1V83/view?usp=sharing)  |[Link](https://drive.google.com/file/d/1IQtTwTqRJu8gSkCe77gOMOQXhs_OTkbv/view?usp=sharing) |
+|TCM-small+AuxT|0.0130   | MSE   |  [ckpt](https://drive.google.com/file/d/1Aps2JGaYMo5CFbk8E6qMmvoX8NB2pTOb/view?usp=sharing)  |[Link](https://drive.google.com/file/d/1r7ybguksq7ab1BCBhUATujGmHzBKC64L/view?usp=sharing) |
+|TCM-small+AuxT|0.0067   | MSE   | [ckpt](https://drive.google.com/file/d/1REIkOYenkjU0wFSL_YpryLr8BVua49Dt/view?usp=sharing)   |[Link](https://drive.google.com/file/d/1Xca6OFjfvdZgh2rLMneAbF8T8cZMZ-JA/view?usp=sharing) |
+|TCM-small+AuxT|0.0035   | MSE   | [ckpt](https://drive.google.com/file/d/1rMX7REPXph4y76Wz5JZgScQN2CSp9_Vs/view?usp=sharing)  | [Link](https://drive.google.com/file/d/1Oli33T365SLBlmI5TpM7EftgZXNf3X1y/view?usp=sharing)|
+|TCM-small+AuxT|0.0018   | MSE   | [ckpt](https://drive.google.com/file/d/1g5XiN3iXZClnxixmxfsN2Ct58Ea5BLiY/view?usp=sharing)  | [Link](https://drive.google.com/file/d/1DAwg_RKpztwqKqN2CQo_wqZy_lzw-ssv/view?usp=sharing)|
 
 | Model |Lambda | Metric | ckpt | log | 
 |-------|--------|--------|------|----|
