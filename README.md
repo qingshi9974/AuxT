@@ -13,8 +13,9 @@ by Han Li, Shaohui Li, Wenrui Dai, Maida Cao, Nuowen Kan, Chenglin Li, Junni Zou
 
 International Conference on Learning Representation (ICLR), 2025.
 
-This repository is the official Pytorch implementation of AuxT.
+This repository is the official Pytorch implementation of AuxT. 
 
+The Aux module is a plug-and-play solution that can accelerate training convergence by 2-3 times for learned image compression, while simultaneously improving rate-distortion performance.
 
 ## Dependencies
 - python==3.9.19
