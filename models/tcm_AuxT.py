@@ -151,6 +151,8 @@ class TCM_AUXT(TCM):
         y_likelihoods = torch.cat(y_likelihood, dim=1)
         y_aux  = y_hat
         y_temp = y_hat
+        
+        ##-----NOTE: THE SHORCUT POSITION FOR g_s IS NOT CONSISTENT WITH THE PAPER, BUT HAS NO IMPACT ON PERFORMANCE----###
         for i,layer in enumerate(self.g_s):
             y_temp = layer(y_temp)
             if i in [0,3,6,9]:
