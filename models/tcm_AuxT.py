@@ -99,13 +99,18 @@ class TCM_AUXT(TCM):
 
 
     def forward(self, x):
-        aux_x = x
-        for i,layer in enumerate(self.g_a):
-            x = layer(x)
-            if i in [0,3,6,9]:
-                aux_x = self.AuxT_enc[i//3](aux_x)
-                x += aux_x
-        y = x
+        
+        y_enc_aux = x
+        y_enc_main = x
+        aux_index = 0
+        for i,layer in enumerate(self.g_a): 
+            y_enc_main = layer(y_enc_main) 
+            if i in [0,3,6,9]: #shorcut position for encoder
+                y_enc_aux = self.AuxT_enc[aux_index](y_enc_aux)
+                y_enc_main += y_enc_aux
+                aux_index += 1
+        y = y_enc_main
+        
         y_shape = y.shape[2:]
         z = self.h_a(y)
         _, z_likelihoods = self.entropy_bottleneck(z)
@@ -149,16 +154,18 @@ class TCM_AUXT(TCM):
         means = torch.cat(mu_list, dim=1)
         scales = torch.cat(scale_list, dim=1)
         y_likelihoods = torch.cat(y_likelihood, dim=1)
-        y_aux  = y_hat
-        y_temp = y_hat
         
-        ##-----NOTE: THE SHORCUT POSITION FOR g_s IS NOT CONSISTENT WITH THE PAPER, BUT HAS NO IMPACT ON PERFORMANCE----###
+        y_dec_aux  = y_hat
+        y_dec_main = y_hat
+        
+        aux_index = 0
         for i,layer in enumerate(self.g_s):
-            y_temp = layer(y_temp)
-            if i in [0,3,6,9]:
-                y_aux = self.AuxT_dec[i//3](y_aux)
-                y_temp += y_aux
-        x_hat = y_temp
+            y_dec_main = layer(y_dec_main)
+            if i in [2,5,8,9]:   # shorcut position for decoder
+                y_dec_aux = self.AuxT_dec[aux_index](y_dec_aux)
+                aux_index += 1
+                y_dec_main += y_dec_aux
+        x_hat = y_dec_main
 
 
         return {
@@ -169,13 +176,16 @@ class TCM_AUXT(TCM):
 
 
     def compress(self, x):
-        aux_x = x
-        for i,layer in enumerate(self.g_a):
-            x = layer(x)
-            if i in [0,3,6,9]:
-                aux_x = self.AuxT_enc[i//3](aux_x)
-                x += aux_x
-        y = x
+        y_enc_aux = x
+        y_enc_main = x
+        aux_index = 0
+        for i,layer in enumerate(self.g_a): 
+            y_enc_main = layer(y_enc_main) 
+            if i in [0,3,6,9]: #shorcut position for encoder
+                y_enc_aux = self.AuxT_enc[aux_index](y_enc_aux)
+                y_enc_main += y_enc_aux
+                aux_index += 1
+        y = y_enc_main
         y_shape = y.shape[2:]
       
         z = self.h_a(y)
@@ -298,14 +308,19 @@ class TCM_AUXT(TCM):
             y_hat_slices.append(y_hat_slice)
 
         y_hat = torch.cat(y_hat_slices, dim=1)
-        y_aux  = y_hat
-        y_temp = y_hat
+        
+        y_dec_aux  = y_hat
+        y_dec_main = y_hat
+        
+        aux_index = 0
         for i,layer in enumerate(self.g_s):
-            y_temp = layer(y_temp)
-            if i in [0,3,6,9]:
-                y_aux = self.AuxT_dec[i//3](y_aux)
-                y_temp += y_aux
-        x_hat = y_temp.clamp_(0, 1)
+            y_dec_main = layer(y_dec_main)
+            if i in [2,5,8,9]:   # shorcut position for decoder
+                y_dec_aux = self.AuxT_dec[aux_index](y_dec_aux)
+                aux_index += 1
+                y_dec_main += y_dec_aux
+
+        x_hat = y_dec_main.clamp_(0, 1)
 
 
         return {"x_hat": x_hat}
