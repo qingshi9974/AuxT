@@ -43,7 +43,7 @@ The code has been reorganized, and the models have been retrained. Therefore, th
 |-------|--------|--------|------|----|
 |TCM-small+AuxT|0.0483   | MSE   | [ckpt](https://drive.google.com/file/d/1zMK4edRlQ4MsgVGxkfOoIzWRoivi0Qyg/view?usp=sharing)   |[Link](https://drive.google.com/file/d/1NOlxyb_xs6b_rKVDAAiDH2CfJmLBySVS/view?usp=sharing) |
 |TCM-small+AuxT |0.0250   | MSE   | [ckpt](https://drive.google.com/file/d/1yTYIwUhgoYIywv1gnbuqQj5Oi0XZP61Y/view?usp=drive_link)  |[Link](https://drive.google.com/file/d/1IQtTwTqRJu8gSkCe77gOMOQXhs_OTkbv/view?usp=sharing) |
-|TCM-small+AuxT|0.0130   | MSE   | TBD  |TBD |
+|TCM-small+AuxT|0.0130   | MSE   | [ckpt](https://drive.google.com/file/d/1uSnTnNzeAS31istZIdmnCUaJcckf-F7S/view?usp=sharing)  | [Link](https://drive.google.com/file/d/1QUNyxp_AQrw2Wwss8xUYrZU4uQkvgQ89/view?usp=sharing) |
 |TCM-small+AuxT|0.0067   | MSE   | [ckpt](https://drive.google.com/file/d/1eVI4nSr1zxStYVfZudJmW8IRIUS--Yfg/view?usp=sharing)   |[Link](https://drive.google.com/file/d/1Xca6OFjfvdZgh2rLMneAbF8T8cZMZ-JA/view?usp=sharing) |
 |TCM-small+AuxT|0.0035   | MSE   | [ckpt](https://drive.google.com/file/d/1xGKdLylhvVilFGvMe7vMdIZFpBCt7Cnu/view?usp=sharing)  | [Link](https://drive.google.com/file/d/1Oli33T365SLBlmI5TpM7EftgZXNf3X1y/view?usp=sharing)|
 |TCM-small+AuxT|0.0018   | MSE   | [ckpt](https://drive.google.com/file/d/1no_pFVxlMgeR_tD9y75Bqrj5aU4xofGt/view?usp=sharing)  | [Link](https://drive.google.com/file/d/1DAwg_RKpztwqKqN2CQo_wqZy_lzw-ssv/view?usp=sharing)|
