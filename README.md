@@ -61,18 +61,18 @@ The code has been reorganized, and the models have been retrained. Therefore, th
 ## Citation
 ```
 @article{li2025disentangled,
-  title={On disentangled training for nonlinear transform in learned image compression},
-  author={Li, Han and Li, Shaohui and Dai, Wenrui and Cao, Maida and Kan, Nuowen and Li, Chenglin and Zou, Junni and Xiong, Hongkai},
-  journal={arXiv preprint arXiv:2501.13751},
-  year={2025}
+    title={On disentangled training for nonlinear transform in learned image compression},
+    author={Li, Han and Li, Shaohui and Dai, Wenrui and Cao, Maida and Kan, Nuowen and Li, Chenglin and Zou, Junni and Xiong, Hongkai},
+    journal={arXiv preprint arXiv:2501.13751},
+    year={2025}
 }
 @inproceedings{
-li2025on,
-title={On Disentangled Training for Nonlinear Transform in Learned Image Compression},
-author={Han Li and Shaohui Li and Wenrui Dai and Maida Cao and Nuowen Kan and Chenglin Li and Junni Zou and Hongkai Xiong},
-booktitle={The Thirteenth International Conference on Learning Representations},
-year={2025},
-url={https://openreview.net/forum?id=U67J0QNtzo}
+    li2025on,
+    title={On Disentangled Training for Nonlinear Transform in Learned Image Compression},
+    author={Han Li and Shaohui Li and Wenrui Dai and Maida Cao and Nuowen Kan and Chenglin Li and Junni Zou and Hongkai Xiong},
+    booktitle={The Thirteenth International Conference on Learning Representations},
+    year={2025},
+    url={https://openreview.net/forum?id=U67J0QNtzo}
 }
 ```
 
